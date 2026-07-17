@@ -72,7 +72,7 @@
 
     width:100%;
 
-    min-height:180px;
+    min-height:120px;
 
     border:1px solid #e5e7eb;
 
@@ -106,7 +106,7 @@
 
 .chat-title{
 
-    margin-top:10px;
+    margin-top:8px;
 
 }
 
@@ -129,5 +129,125 @@
 .suggest-grid .card:hover{
 
     border-color:#19a391;
+
+}
+
+.conversation{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.message{
+
+    padding:18px;
+
+    border-radius:14px;
+
+}
+
+.message.user{
+
+    background:#eef8f7;
+
+}
+
+.message.assistant{
+
+    background:#f8f8f8;
+
+}
+
+.message strong{
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.message p{
+
+    white-space:pre-wrap;
+
+    line-height:1.8;
+
+}
+
+.conversation-empty{
+
+    text-align:center;
+
+    padding:32px 0;
+
+}
+
+.conversation-empty p{
+
+    margin-top:10px;
+
+    color:#777;
+
+}
+
+.note-input{
+
+    width:100%;
+
+    min-height:140px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    resize:vertical;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.note-input:focus{
+
+    border-color:#19a391;
+
+}
+
+/* ---------- Actions ---------- */
+
+.save-button{
+
+    margin-top:8px;
+
+}
+
+.save-button .primary-button{
+
+    width:100%;
+
+}
+
+.action-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+    margin-top:18px;
+
+}
+
+.action-grid .primary-button{
+
+    width:100%;
 
 }

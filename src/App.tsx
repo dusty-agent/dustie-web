@@ -12,6 +12,8 @@ import ResearchPage from "./pages/Intelligence/Research/Research";
 import Property from "./pages/Property/Property";
 import Analysis from "./pages/Analysis/Analysis";
 import Research from "./pages/Research/Research";
+import Workspace from "./pages/Workspace/Workspace";
+
 import Settings from "./pages/Settings/Settings";
 
 
@@ -58,6 +60,11 @@ function App() {
                     <Route
                         path="/research"
                         element={<Research />}
+                    />
+
+                    <Route
+                        path="/workspace"
+                        element={<Workspace />}
                     />
 
                     <Route

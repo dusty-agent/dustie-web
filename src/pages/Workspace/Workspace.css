@@ -1,0 +1,91 @@
+.workspace-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.workspace-subtitle{
+
+    color:#666;
+
+    margin-top:-12px;
+
+}
+
+.workspace-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.status-dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#19a391;
+
+    animation:pulse 1.6s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.35);
+
+        opacity:.45;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.workspace-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.workspace-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    color:#555;
+
+}

@@ -11,7 +11,7 @@ export default function Sidebar() {
             <nav>
 
                 <NavLink to="/">
-                    🏠 Dashboard
+                    🏠 대시보드
                 </NavLink>
 
                 <NavLink to="/chat">
@@ -23,15 +23,15 @@ export default function Sidebar() {
                 </NavLink>
 
                 <NavLink to="/property">
-                    🏢 Today's Property
+                    🏢 추천 물건
                 </NavLink>
 
                 <NavLink to="/analysis">
-                    📈 Property Analysis
+                    📈 투자 분석
                 </NavLink>
 
-                <NavLink to="/settings">
-                    ⚙ Settings
+                <NavLink to="/workspace">
+                    📂 Workspace
                 </NavLink>
 
             </nav>

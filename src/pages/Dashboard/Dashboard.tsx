@@ -23,18 +23,46 @@ export default function Dashboard() {
 
         }, []);
 
-        const date = now.toLocaleDateString("en-US", {
-            weekday: "long",
+        const hour = now.getHours();
+
+        let greeting = "👋 안녕하세요!";
+
+        if (hour >= 5 && hour < 12) {
+
+            greeting = "☀ 좋은 아침입니다!";
+
+        } else if (hour >= 12 && hour < 18) {
+
+            greeting = "🌤 좋은 오후입니다!";
+
+        } else {
+
+            greeting = "🌙 좋은 저녁입니다!";
+
+        }
+
+        const date = now.toLocaleDateString("ko-KR", {
+
             year: "numeric",
+
             month: "long",
+
             day: "numeric",
+
+            weekday: "long",
+
         });
-        
+
         const time = now.toLocaleTimeString("ko-KR", {
+
             hour: "2-digit",
+
             minute: "2-digit",
+
             second: "2-digit",
+
             hour12: false,
+
         });
 
     return (
@@ -47,7 +75,7 @@ export default function Dashboard() {
 
                 <div>
 
-                    <h1>☀ Good Morning</h1>
+                    <h1>{greeting}</h1>
 
                     <p className="dashboard-date">
                         {date}
@@ -58,7 +86,7 @@ export default function Dashboard() {
                     </p>
 
                     <p className="subtitle">
-                        Welcome back to Dustie.
+                        오늘도 더스티와 함께 부동산 시장을 분석해보세요.
                     </p>
 
                 </div>
@@ -74,36 +102,36 @@ export default function Dashboard() {
                     onClick={() => navigate("/intelligence/daily")}
                 >
 
-                    <p>Today's Morning Brief</p>
+                    <p>AI가 선별한 오늘의 주요 부동산 뉴스</p>
 
                     <span>
-                        Check today's briefing →
+                        오늘의 브리핑 보기 →
                     </span>
 
                 </Card>
 
                 <Card
-                    title="🏢 Today's Property"
+                    title="🏢 오늘의 추천 물건"
                     onClick={() => navigate("/property")}
                 >
 
-                    <p>Recommended Deals</p>
+                    <p>오늘의 투자 기회를 확인해보세요.</p>
 
                     <span>
-                        View today's properties →
+                        추천 물건 보기 →
                     </span>
 
                 </Card>
 
                 <Card
-                    title="📈 Property Analysis"
+                    title="📈 투자 분석"
                     onClick={() => navigate("/analysis")}
                 >
 
-                    <p>Investment Toolkit</p>
+                    <p>ROI, 입지, 업종을 분석합니다.</p>
 
                     <span>
-                        Calculate ROI →
+                        투자 분석 시작 →
                     </span>
 
                 </Card>
@@ -113,10 +141,10 @@ export default function Dashboard() {
                     onClick={() => navigate("/chat")}
                 >
 
-                    <p>AI Investment Assistant</p>
+                    <p>더스티 AI 부동산 투자 비서</p>
 
                     <span>
-                        Start chatting →
+                        상담 시작하기 →
                     </span>
 
                 </Card>
@@ -127,39 +155,38 @@ export default function Dashboard() {
 
             <h2 className="section-title">
 
-                Quick Actions
-
+                빠른 실행
             </h2>
 
             <section className="action-grid">
 
-                <Card
-                    title="📰 AP Daily"
-                    onClick={() => navigate("/intelligence/daily")}
-                >
-                    <p>Today's Brief</p>
-                </Card>
+            <Card
+                title="📰 AP Daily"
+                onClick={() => navigate("/intelligence/daily")}
+            >
+                <p>오늘의 브리핑</p>
+            </Card>
 
-                <Card
-                    title="🤖 Ask Dustie"
-                    onClick={() => navigate("/chat")}
-                >
-                    <p>Investment Assistant</p>
-                </Card>
+            <Card
+                title="🤖 Ask Dustie"
+                onClick={() => navigate("/chat")}
+            >
+                <p>AI 투자 상담</p>
+            </Card>
 
-                <Card
-                    title="📈 ROI Calculator"
-                    onClick={() => navigate("/analysis")}
-                >
-                    <p>Investment Analysis</p>
-                </Card>
+            <Card
+                title="📈 투자 분석"
+                onClick={() => navigate("/analysis")}
+            >
+                <p>ROI · 입지 · 업종 분석</p>
+            </Card>
 
-                <Card
-                    title="🏢 Today's Property"
-                    onClick={() => navigate("/property")}
-                >
-                    <p>Recommended Deals</p>
-                </Card>
+            <Card
+                title="🏢 오늘의 추천 물건"
+                onClick={() => navigate("/property")}
+            >
+                <p>오늘의 투자 기회</p>
+            </Card>
 
             </section>
 
@@ -167,7 +194,7 @@ export default function Dashboard() {
 
             <h2 className="market-title">
 
-                Today's Market
+                오늘의 시장 현황
 
             </h2>
 
@@ -205,13 +232,13 @@ export default function Dashboard() {
 
                 <ul className="activity-list">
 
-                    <li>📰 AP Daily generated successfully</li>
+                    <li>📰 AP 데일리 생성 완료</li>
 
-                    <li>📸 Instagram card uploaded</li>
+                    <li>📸 인스타그램 카드 업로드 완료</li>
 
-                    <li>📘 Facebook card uploaded</li>
+                    <li>📘 Facebook 카드 업로드 완료</li>
 
-                    <li>🤖 Dustie is ready</li>
+                    <li>🤖 Dustie 준비 완료</li>
 
                 </ul>
 

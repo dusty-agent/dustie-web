@@ -3,42 +3,42 @@ import Button from "../../components/ui/Button";
 
 import "./Property.css";
 
-export default function Property(){
+export default function Property() {
 
-    return(
+    return (
 
         <div className="property-page">
 
-            <h1>🏢 Today's Property</h1>
+            <h1>🏢 오늘의 투자 기회</h1>
 
             <p className="property-subtitle">
 
-                AI Recommended Investment Opportunities
+                AI가 선별한 오늘의 추천 물건과 경매 정보를 확인해보세요.
 
             </p>
 
-            <Card title="Today's Recommendation">
+            <Card title="🏬 오늘의 추천 매물">
 
                 <div className="property-list">
 
                     <PropertyCard
-                        title="Office Building"
-                        location="Yeongdeungpo-gu"
-                        price="₩5.2B"
+                        title="업무시설"
+                        location="서울 영등포구"
+                        price="52억 원"
                         roi="6.4%"
                     />
 
                     <PropertyCard
-                        title="Retail"
-                        location="Mapo-gu"
-                        price="₩2.8B"
+                        title="근린생활시설"
+                        location="서울 마포구"
+                        price="28억 원"
                         roi="5.8%"
                     />
 
                     <PropertyCard
-                        title="Factory"
-                        location="Gimpo"
-                        price="₩8.4B"
+                        title="공장"
+                        location="경기도 김포시"
+                        price="84억 원"
                         roi="7.1%"
                     />
 
@@ -46,31 +46,59 @@ export default function Property(){
 
             </Card>
 
-            <Card title="Recommended Business">
+            <Card title="⚖ 오늘의 경매 물건">
 
-                <div className="business-grid">
+                <div className="property-list">
 
-                    <Business title="🍜 Restaurant"/>
+                    <PropertyCard
+                        title="근린생활시설"
+                        location="서울 구로구"
+                        price="18억 원"
+                        roi="-"
+                    />
 
-                    <Business title="☕ Cafe"/>
-
-                    <Business title="🏋 Fitness"/>
-
-                    <Business title="🏥 Clinic"/>
+                    <PropertyCard
+                        title="다가구주택"
+                        location="서울 강서구"
+                        price="13억 원"
+                        roi="-"
+                    />
 
                 </div>
 
             </Card>
 
-            <Card title="Today's Market Insight">
+            <Card title="🤖 AI 추천 업종">
+
+                <div className="business-grid">
+
+                    <Business title="🍜 일반음식점" />
+
+                    <Business title="☕ 카페" />
+
+                    <Business title="🏋 피트니스" />
+
+                    <Business title="🏥 의원" />
+
+                    <Business title="🏪 편의점" />
+
+                    <Business title="💊 약국" />
+
+                </div>
+
+            </Card>
+
+            <Card title="📈 오늘의 시장 인사이트">
 
                 <ul className="insight-list">
 
-                    <li>📈 Office demand is increasing</li>
+                    <li>📈 서울 업무시설 거래량이 증가하고 있습니다.</li>
 
-                    <li>🏦 Interest rates remain stable</li>
+                    <li>🏦 기준금리 동결 전망이 유지되고 있습니다.</li>
 
-                    <li>🏢 Vacancy rate is decreasing</li>
+                    <li>🏢 공실률이 점차 감소하고 있습니다.</li>
+
+                    <li>⚖ 수도권 경매 물건이 증가하고 있습니다.</li>
 
                 </ul>
 
@@ -82,27 +110,27 @@ export default function Property(){
 
 }
 
-function PropertyCard(props:any){
+function PropertyCard(props: any) {
 
-    return(
+    return (
 
         <div className="property-card">
 
             <h3>{props.title}</h3>
 
-            <p>{props.location}</p>
+            <p>📍 {props.location}</p>
 
-            <p>{props.price}</p>
+            <p>💰 {props.price}</p>
 
             <p className="roi">
 
-                ROI {props.roi}
+                예상 수익률 {props.roi}
 
             </p>
 
             <Button>
 
-                Analyze
+                투자 분석하기
 
             </Button>
 
@@ -112,9 +140,9 @@ function PropertyCard(props:any){
 
 }
 
-function Business({title}:{title:string}){
+function Business({ title }: { title: string }) {
 
-    return(
+    return (
 
         <div className="business-card">
 

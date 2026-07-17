@@ -17,7 +17,7 @@ export default function Intelligence() {
 
             <p className="intelligence-subtitle">
 
-                Real Estate Intelligence by AssetPicker
+                부동산 뉴스, 리서치, AI 인사이트를 한 곳에서. AssetPicker 부동산 인텔리전스.
 
             </p>
 
@@ -29,17 +29,17 @@ export default function Intelligence() {
 
                     <div>
 
-                        <h3>Today's Intelligence</h3>
+                        <h3>오늘의 인텔리전스</h3>
 
                         <p>
 
-                            Daily Brief and AI Research are ready.
+                            AP Daily와 AP Research가 준비되었습니다.
 
                         </p>
 
                         <span>
 
-                            Updated Today 07:30 KST
+                            오늘 오전 07:30 업데이트
 
                         </span>
 
@@ -55,14 +55,14 @@ export default function Intelligence() {
 
                     <p>
 
-                        Start your day with today's AI real estate briefing.
+                        AI가 선별한 오늘의 주요 부동산 뉴스를 빠르게 확인해보세요.
 
                     </p>
 
                     <Button
                         onClick={() => navigate("/intelligence/daily")}
                     >
-                        View Daily →
+                        오늘의 브리핑 보기 →
                     </Button>
 
                 </Card>
@@ -71,26 +71,27 @@ export default function Intelligence() {
 
                     <p>
 
-                        Explore market research, policy, redevelopment and AI insights.
+                        시장 분석, 정책, 재개발·재건축 등 심층 리서치를 제공합니다.
 
                     </p>
 
                     <Button
                         onClick={() => navigate("/intelligence/research")}
                     >
-                        View Research →
+                        리서치 보기 →
                     </Button>
 
                 </Card>
 
             </section>
 
-            <Card title="🎥 AssetPicker Channel">
+            <Card title="🎥 AssetPicker 유튜브">
 
                 <p>
 
-                    Watch daily market briefings, investment analysis,
-                    property tours and Shorts.
+                    AP Daily 브리핑,
+                    투자 분석,
+                    임장 콘텐츠와 Shorts를 만나보세요.
 
                 </p>
 
@@ -102,7 +103,7 @@ export default function Intelligence() {
                         )
                     }
                 >
-                    Watch on YouTube →
+                    유튜브 바로가기 →
                 </Button>
 
             </Card>
@@ -113,7 +114,8 @@ export default function Intelligence() {
 
                     <p>
 
-                        Daily card news and market highlights.
+                        매일 업로드되는 카드뉴스와
+                        시장 인사이트를 확인해보세요.
 
                     </p>
 
@@ -125,7 +127,7 @@ export default function Intelligence() {
                             )
                         }
                     >
-                        Open Instagram →
+                        인스타그램 방문 →
                     </Button>
 
                 </Card>
@@ -134,7 +136,8 @@ export default function Intelligence() {
 
                     <p>
 
-                        Follow AssetPicker for the latest updates.
+                        최신 부동산 소식과
+                        AP Daily 카드뉴스를 받아보세요.
 
                     </p>
 
@@ -146,7 +149,7 @@ export default function Intelligence() {
                             )
                         }
                     >
-                        Open Facebook →
+                        페이스북 방문 →
                     </Button>
 
                 </Card>
