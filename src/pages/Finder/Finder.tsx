@@ -9,130 +9,113 @@ export default function Finder() {
 
         <div className="finder-page">
 
-            <h1>🏢 오늘의 투자 기회</h1>
+            <h1>🔍 Finder</h1>
 
             <p className="finder-subtitle">
 
-                AI가 선별한 오늘의 추천 물건과 경매 정보를 확인해보세요.
+                오늘의 투자 기회를 찾아보세요.
 
             </p>
 
-            <Card title="🏬 오늘의 추천 매물">
+            <Card title="⚖ 오늘의 경매">
 
-                <div className="finder-list">
+                <p>
 
-                    <FinderCard
-                        title="업무시설"
-                        location="서울 영등포구"
-                        price="52억 원"
-                        roi="6.4%"
-                    />
+                    오늘 등록된 경매 물건을 확인합니다.
 
-                    <FinderCard
-                        title="근린생활시설"
-                        location="서울 마포구"
-                        price="28억 원"
-                        roi="5.8%"
-                    />
+                </p>
 
-                    <FinderCard
-                        title="공장"
-                        location="경기도 김포시"
-                        price="84억 원"
-                        roi="7.1%"
-                    />
+                <Button>
+
+                    경매 보기
+
+                </Button>
+
+            </Card>
+
+            <Card title="🏛 오늘의 공매">
+
+                <p>
+
+                    캠코 공매 물건을 확인합니다.
+
+                </p>
+
+                <Button>
+
+                    공매 보기
+
+                </Button>
+
+            </Card>
+
+            <Card title="📍 입지 시뮬레이션">
+
+                <p>
+
+                    주소를 입력하면 AI가 입지를 분석합니다.
+
+                </p>
+
+                <input
+
+                    className="finder-input"
+
+                    placeholder="예) 서울 영등포구 ○○로 123"
+
+                />
+
+                <div className="finder-action">
+
+                    <Button>
+
+                        분석하기
+
+                    </Button>
 
                 </div>
 
             </Card>
 
-            <Card title="⚖ 오늘의 경매 물건">
-
-                <div className="finder-list">
-
-                    <FinderCard
-                        title="근린생활시설"
-                        location="서울 구로구"
-                        price="18억 원"
-                        roi="-"
-                    />
-
-                    <FinderCard
-                        title="다가구주택"
-                        location="서울 강서구"
-                        price="13억 원"
-                        roi="-"
-                    />
-
-                </div>
-
-            </Card>
-
-            <Card title="🤖 AI 추천 업종">
+            <Card title="🤖 AI 분석 항목">
 
                 <div className="business-grid">
 
-                    <Business title="🍜 일반음식점" />
-
-                    <Business title="☕ 카페" />
-
-                    <Business title="🏋 피트니스" />
-
-                    <Business title="🏥 의원" />
-
                     <Business title="🏪 편의점" />
 
-                    <Business title="💊 약국" />
+                    <Business title="🚬 담배권" />
+
+                    <Business title="🏢 경쟁업종" />
+
+                    <Business title="🚗 주차" />
+
+                    <Business title="👨 유동인구" />
+
+                    <Business title="🏥 병원" />
+
+                    <Business title="🏫 학교" />
+
+                    <Business title="🚉 역세권" />
 
                 </div>
 
             </Card>
 
-            <Card title="📈 오늘의 시장 인사이트">
+            <Card title="📈 오늘의 시장">
 
                 <ul className="insight-list">
 
-                    <li>📈 서울 업무시설 거래량이 증가하고 있습니다.</li>
+                    <li>📈 서울 업무시설 거래량 증가</li>
 
-                    <li>🏦 기준금리 동결 전망이 유지되고 있습니다.</li>
+                    <li>⚖ 경매 진행 건수 증가</li>
 
-                    <li>🏢 공실률이 점차 감소하고 있습니다.</li>
+                    <li>🏛 공매 물건 증가</li>
 
-                    <li>⚖ 수도권 경매 물건이 증가하고 있습니다.</li>
+                    <li>🏦 기준금리 동결 전망</li>
 
                 </ul>
 
             </Card>
-
-        </div>
-
-    );
-
-}
-
-function FinderCard(props: any) {
-
-    return (
-
-        <div className="finder-card">
-
-            <h3>{props.title}</h3>
-
-            <p>📍 {props.location}</p>
-
-            <p>💰 {props.price}</p>
-
-            <p className="roi">
-
-                예상 수익률 {props.roi}
-
-            </p>
-
-            <Button>
-
-                투자 분석하기
-
-            </Button>
 
         </div>
 
