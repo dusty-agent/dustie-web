@@ -1,0 +1,39 @@
+.card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    margin-bottom:24px;
+
+    border:1px solid #ececec;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.04);
+
+    transition:all .25s ease;
+
+    cursor:pointer;
+
+}
+
+.card-title{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#41c7b5;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+
+}

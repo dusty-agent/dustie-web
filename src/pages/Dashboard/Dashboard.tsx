@@ -1,5 +1,14 @@
+import Card from "../../components/ui/Card";
+import { useNavigate } from "react-router-dom";
+
+import "./Dashboard.css";
+
 export default function Dashboard() {
+
+    const navigate = useNavigate();
+
     return (
+
         <div>
 
             <h1>Good Morning ☀️</h1>
@@ -8,68 +17,40 @@ export default function Dashboard() {
                 Welcome back to Dustie.
             </p>
 
-            <div
-                style={{
-                    marginTop: 40,
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2,1fr)",
-                    gap: 24,
-                }}
-            >
+            <div className="dashboard-grid">
 
                 <Card
                     title="📰 AP Daily"
-                    description="Today's Morning Brief"
-                />
+                    onClick={() => navigate("/daily")}
+                >
+                    <p>Today's Morning Brief</p>
+                </Card>
 
                 <Card
                     title="🏢 Today's Property"
-                    description="Recommended Deals"
-                />
+                    onClick={() => navigate("/property")}
+                >
+                    <p>Recommended Deals</p>
+                </Card>
 
                 <Card
                     title="📈 Property Analysis"
-                    description="Investment Calculator"
-                />
+                    onClick={() => navigate("/analysis")}
+                >
+                    <p>Investment Calculator</p>
+                </Card>
 
                 <Card
                     title="🤖 Ask Dustie"
-                    description="AI Investment Assistant"
-                />
+                    onClick={() => navigate("/chat")}
+                >
+                    <p>AI Investment Assistant</p>
+                </Card>
 
             </div>
 
         </div>
-    );
-}
 
-function Card({
-    title,
-    description,
-}: {
-    title: string;
-    description: string;
-}) {
-    return (
-        <div
-            style={{
-                background: "#fff",
-                borderRadius: 16,
-                padding: 24,
-                border: "1px solid #e5e7eb",
-                minHeight: 180,
-            }}
-        >
-            <h2>{title}</h2>
-
-            <p
-                style={{
-                    marginTop: 10,
-                    color: "#666",
-                }}
-            >
-                {description}
-            </p>
-        </div>
     );
+
 }

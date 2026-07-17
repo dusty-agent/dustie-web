@@ -1,39 +1,35 @@
 import { Outlet } from "react-router-dom";
 
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
-import Footer from "../components/Footer";
+import Header from "../components/common/Header";
+import Sidebar from "../components/common/Sidebar";
+import Footer from "../components/common/Footer";
+
+import "./MainLayout.css";
 
 export default function MainLayout() {
+
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                minHeight: "100vh",
-            }}
-        >
+
+        <div className="layout">
+
             <Header />
 
-            <div
-                style={{
-                    display: "flex",
-                    flex: 1,
-                }}
-            >
+            <div className="layout-body">
+
                 <Sidebar />
 
-                <main
-                    style={{
-                        flex: 1,
-                        padding: 32,
-                    }}
-                >
+                <main className="layout-main">
+
                     <Outlet />
+
                 </main>
+
             </div>
 
             <Footer />
+
         </div>
+
     );
+
 }
