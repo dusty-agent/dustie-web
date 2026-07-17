@@ -1,5 +1,4 @@
 import { useState } from "react";
-import jsPDF from "jspdf";
 import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
 
