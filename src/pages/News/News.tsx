@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
 
-import "./news.css";
+import "./News.css";
 
 export default function News() {
 
