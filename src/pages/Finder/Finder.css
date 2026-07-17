@@ -1,4 +1,4 @@
-.property-page{
+.finder-page{
 
     display:flex;
 
@@ -8,7 +8,7 @@
 
 }
 
-.property-subtitle{
+.finder-subtitle{
 
     color:#777;
 
@@ -16,7 +16,7 @@
 
 }
 
-.property-list{
+.finder-list{
 
     display:grid;
 
@@ -26,7 +26,7 @@
 
 }
 
-.property-card{
+.finder-card{
 
     border:1px solid #ececec;
 
@@ -36,7 +36,7 @@
 
 }
 
-.property-card h3{
+.finder-card h3{
 
     margin-bottom:10px;
 

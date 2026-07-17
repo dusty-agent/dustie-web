@@ -99,7 +99,7 @@ export default function Dashboard() {
 
                 <Card
                     title="📰 AP Daily"
-                    onClick={() => navigate("/intelligence/daily")}
+                    onClick={() => navigate("/News/daily")}
                 >
 
                     <p>AI가 선별한 오늘의 주요 부동산 뉴스</p>
@@ -112,7 +112,7 @@ export default function Dashboard() {
 
                 <Card
                     title="🏢 오늘의 추천 물건"
-                    onClick={() => navigate("/property")}
+                    onClick={() => navigate("/finder")}
                 >
 
                     <p>오늘의 투자 기회를 확인해보세요.</p>
@@ -162,7 +162,7 @@ export default function Dashboard() {
 
             <Card
                 title="📰 AP Daily"
-                onClick={() => navigate("/intelligence/daily")}
+                onClick={() => navigate("/News/daily")}
             >
                 <p>오늘의 브리핑</p>
             </Card>
@@ -183,7 +183,7 @@ export default function Dashboard() {
 
             <Card
                 title="🏢 오늘의 추천 물건"
-                onClick={() => navigate("/property")}
+                onClick={() => navigate("/finder")}
             >
                 <p>오늘의 투자 기회</p>
             </Card>

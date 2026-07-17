@@ -5,13 +5,12 @@ import MainLayout from "./layouts/MainLayout";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Chat from "./pages/Chat/Chat";
 
-import Intelligence from "./pages/Intelligence/Intelligence";
-import Daily from "./pages/Intelligence/Daily/Daily";
-import ResearchPage from "./pages/Intelligence/Research/Research";
+import News from "./pages/News/News";
+import Daily from "./pages/News/Daily/Daily";
+import Research from "./pages/News/Research/Research";
 
-import Property from "./pages/Property/Property";
+import Finder from "./pages/Finder/Finder";
 import Analysis from "./pages/Analysis/Analysis";
-import Research from "./pages/Research/Research";
 import Workspace from "./pages/Workspace/Workspace";
 
 import Settings from "./pages/Settings/Settings";
@@ -35,31 +34,26 @@ function App() {
                     />
 
                     <Route
-                        path="/intelligence"
-                        element={<Intelligence />}
+                        path="/News"
+                        element={<News />}
                     />
                     <Route
-                        path="/intelligence/daily"
+                        path="/News/daily"
                         element={<Daily />}
                     />
 
                     <Route
-                        path="/intelligence/research"
-                        element={<ResearchPage />}
+                        path="/News/research"
+                        element={<Research />}
                     />
                     <Route
-                        path="/property"
-                        element={<Property />}
+                        path="/finder"
+                        element={<Finder />}
                     />
 
                     <Route
                         path="/analysis"
                         element={<Analysis />}
-                    />
-
-                    <Route
-                        path="/research"
-                        element={<Research />}
                     />
 
                     <Route

@@ -1,17 +1,17 @@
 import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
 
-import "./Property.css";
+import "./Finder.css";
 
-export default function Property() {
+export default function Finder() {
 
     return (
 
-        <div className="property-page">
+        <div className="finder-page">
 
             <h1>🏢 오늘의 투자 기회</h1>
 
-            <p className="property-subtitle">
+            <p className="finder-subtitle">
 
                 AI가 선별한 오늘의 추천 물건과 경매 정보를 확인해보세요.
 
@@ -19,23 +19,23 @@ export default function Property() {
 
             <Card title="🏬 오늘의 추천 매물">
 
-                <div className="property-list">
+                <div className="finder-list">
 
-                    <PropertyCard
+                    <FinderCard
                         title="업무시설"
                         location="서울 영등포구"
                         price="52억 원"
                         roi="6.4%"
                     />
 
-                    <PropertyCard
+                    <FinderCard
                         title="근린생활시설"
                         location="서울 마포구"
                         price="28억 원"
                         roi="5.8%"
                     />
 
-                    <PropertyCard
+                    <FinderCard
                         title="공장"
                         location="경기도 김포시"
                         price="84억 원"
@@ -48,16 +48,16 @@ export default function Property() {
 
             <Card title="⚖ 오늘의 경매 물건">
 
-                <div className="property-list">
+                <div className="finder-list">
 
-                    <PropertyCard
+                    <FinderCard
                         title="근린생활시설"
                         location="서울 구로구"
                         price="18억 원"
                         roi="-"
                     />
 
-                    <PropertyCard
+                    <FinderCard
                         title="다가구주택"
                         location="서울 강서구"
                         price="13억 원"
@@ -110,11 +110,11 @@ export default function Property() {
 
 }
 
-function PropertyCard(props: any) {
+function FinderCard(props: any) {
 
     return (
 
-        <div className="property-card">
+        <div className="finder-card">
 
             <h3>{props.title}</h3>
 

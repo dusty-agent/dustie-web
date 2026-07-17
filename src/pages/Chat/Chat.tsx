@@ -107,7 +107,7 @@ export default function Chat() {
     ========================================
     
     Powered by Dustie
-    AssetPicker Intelligence
+    AssetPicker News
     
     `;
     

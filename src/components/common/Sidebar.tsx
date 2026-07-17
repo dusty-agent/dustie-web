@@ -11,27 +11,75 @@ export default function Sidebar() {
             <nav>
 
                 <NavLink to="/">
-                    🏠 대시보드
+
+                    <div className="menu-title">
+                        🏠 Dashboard
+                    </div>
+
+                    <div className="menu-desc">
+                        오늘의 업무
+                    </div>
+
                 </NavLink>
 
                 <NavLink to="/chat">
-                    🤖 Ask Dustie
+
+                    <div className="menu-title">
+                        🤖 Ask Dustie
+                    </div>
+
+                    <div className="menu-desc">
+                        AI 투자 비서
+                    </div>
+
                 </NavLink>
 
-                <NavLink to="/intelligence">
-                    📰 Intelligence
+                <NavLink to="/news">
+
+                    <div className="menu-title">
+                        📰 News
+                    </div>
+
+                    <div className="menu-desc">
+                        부동산 뉴스와 리포트
+                    </div>
+
                 </NavLink>
 
-                <NavLink to="/property">
-                    🏢 추천 물건
+                <NavLink to="/finder">
+
+                    <div className="menu-title">
+                        🔍 Finder
+                    </div>
+
+                    <div className="menu-desc">
+                        투자 기회 탐색
+                    </div>
+
                 </NavLink>
 
                 <NavLink to="/analysis">
-                    📈 투자 분석
+
+                    <div className="menu-title">
+                        📈 Analysis
+                    </div>
+
+                    <div className="menu-desc">
+                        투자 분석 도구
+                    </div>
+
                 </NavLink>
 
                 <NavLink to="/workspace">
-                    📂 Workspace
+
+                    <div className="menu-title">
+                        📂 Workspace
+                    </div>
+
+                    <div className="menu-desc">
+                        저장한 상담과 분석
+                    </div>
+
                 </NavLink>
 
             </nav>

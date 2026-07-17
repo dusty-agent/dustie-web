@@ -1,7 +1,7 @@
 export default function Analysis() {
     return (
         <div>
-            <h1>📈 Property Analysis</h1>
+            <h1>📈 Finder Analysis</h1>
 
             <p>
                 투자 분석 툴

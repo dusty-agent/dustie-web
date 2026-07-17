@@ -3,19 +3,19 @@ import { useNavigate } from "react-router-dom";
 import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
 
-import "./Intelligence.css";
+import "./news.css";
 
-export default function Intelligence() {
+export default function News() {
 
     const navigate = useNavigate();
 
     return (
 
-        <div className="intelligence-page">
+        <div className="news-page">
 
-            <h1>📰 Intelligence</h1>
+            <h1>📰 News</h1>
 
-            <p className="intelligence-subtitle">
+            <p className="news-subtitle">
 
                 부동산 뉴스, 리서치, AI 인사이트를 한 곳에서. AssetPicker 부동산 인텔리전스.
 
@@ -49,7 +49,7 @@ export default function Intelligence() {
 
             </Card>
 
-            <section className="intelligence-grid">
+            <section className="news-grid">
 
                 <Card title="📰 AP Daily">
 
@@ -60,7 +60,7 @@ export default function Intelligence() {
                     </p>
 
                     <Button
-                        onClick={() => navigate("/intelligence/daily")}
+                        onClick={() => navigate("/news/daily")}
                     >
                         오늘의 브리핑 보기 →
                     </Button>
@@ -76,7 +76,7 @@ export default function Intelligence() {
                     </p>
 
                     <Button
-                        onClick={() => navigate("/intelligence/research")}
+                        onClick={() => navigate("/news/research")}
                     >
                         리서치 보기 →
                     </Button>
