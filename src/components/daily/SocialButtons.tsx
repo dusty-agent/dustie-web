@@ -2,7 +2,7 @@ const INSTAGRAM =
     "https://instagram.com/assetpicker";
 
 const FACEBOOK =
-    "https://facebook.com/...";
+    "https://facebook.com/assetpicker";
 
 export default function SocialButtons() {
 
