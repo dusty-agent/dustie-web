@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import jsPDF from "jspdf";
 import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
 
@@ -51,9 +51,39 @@ export default function Chat() {
         const assistantMessage: Message = {
 
             role: "assistant",
-
-            content:
-            "안녕하세요.\n\n현재는 UI 개발 단계입니다.\n\n추후 AssetPicker AI가 연결되면 이곳에 실제 분석 결과가 표시됩니다.",
+        
+            content: `
+        📊 분석 결과
+        
+        ━━━━━━━━━━━━━━━━━━
+        
+        📍 분석 대상
+        ${message}
+        
+        🏢 투자 적합도
+        ★★★★☆
+        
+        📈 예상 수익성
+        긍정적
+        
+        ⚠ 검토 필요 사항
+        
+        • 입지 분석
+        • 유동인구 확인
+        • 경쟁 업종 조사
+        
+        💡 추천 다음 단계
+        
+        1. Finder에서 입지 시뮬레이션
+        2. Analysis에서 ROI 분석
+        3. Dustie와 추가 상담
+        
+        ━━━━━━━━━━━━━━━━━━
+        
+        ※ 현재는 UI 개발 단계입니다.
+        향후 AssetPicker AI가 연결되면 실제 분석 결과가 표시됩니다.
+        `
+        
         };
 
         setConversation((prev) => [
@@ -72,46 +102,67 @@ export default function Chat() {
 
     const handleDownload = () => {
 
-        const text = `
+        const now = new Date();
     
-    ========================================
+        const summary = `
     
-    Dustie 상담 기록
+    ==========================================
+              Dustie 상담 요약
+    ==========================================
     
-    ========================================
+    상담일시
     
-    생성일시
+    ${now.toLocaleString("ko-KR")}
     
-    ${new Date().toLocaleString("ko-KR")}
+    ==========================================
     
-    ========================================
+    상담 주제
     
-    대화 내용
+    ${conversation.find(m => m.role === "user")?.content || "-"}
     
-    ${conversation
-        .map(
-            (m) =>
-    `${m.role === "user" ? "🙋 사용자" : "🤖 Dustie"}
+    ==========================================
     
-    ${m.content}
-    `
-        )
-        .join("\n")}
+    분석 결과
     
-    ========================================
+    • 투자 적합도 : ★★★★☆
+    
+    • 예상 수익성 : 긍정적
+    
+    • 검토 필요 사항
+    
+      - 입지 분석
+    
+      - 유동인구 확인
+    
+      - 경쟁 업종 조사
+    
+    ==========================================
+    
+    다음 추천 작업
+    
+    □ Finder에서 입지 시뮬레이션
+    
+    □ Analysis에서 ROI 분석
+    
+    □ Dustie 추가 상담
+    
+    ==========================================
     
     상담 메모
     
-    ${note}
+    ${note || "작성된 메모가 없습니다."}
     
-    ========================================
+    ==========================================
     
     Powered by Dustie
-    AssetPicker News
+    
+    https://dustie.xyz
+    
+    ==========================================
     
     `;
     
-        const blob = new Blob([text], {
+        const blob = new Blob([summary], {
     
             type: "text/plain;charset=utf-8",
     
@@ -123,9 +174,9 @@ export default function Chat() {
     
         a.href = url;
     
-        a.download = `Dustie_상담기록_${new Date()
+        a.download = `Dustie_상담요약_${now
             .toISOString()
-            .slice(0, 10)}.txt`;
+            .slice(0,10)}.txt`;
     
         a.click();
     
@@ -325,9 +376,9 @@ export default function Chat() {
 
                 <div className="action-grid">
 
-                    <Button>
+                    <Button onClick={handleDownload}>
 
-                        📄 상담기록 다운로드
+                        📄 TXT 다운로드
 
                     </Button>
 
