@@ -1,135 +1,135 @@
-import Card from "../../components/ui/Card";
-import Button from "../../components/ui/Button";
+import { useNavigate } from "react-router-dom";
+
+import Tabs, {
+    type TabItem,
+} from "../../components/ui/Tabs";
+
+import AuctionSection from "../../components/finder/sections/AuctionSection";
+import PublicSection from "../../components/finder/sections/PublicSection";
+import LocationSection from "../../components/finder/sections/LocationSection";
+
+import { useFinder, type FinderTab } from "../../hooks/useFinder";
 
 import "./Finder.css";
 
 export default function Finder() {
 
+    const navigate = useNavigate();
+
+    const {
+
+        tab,
+
+        setTab,
+
+        auctions,
+
+        publicSales,
+
+        locationResult,
+
+        analyze,
+
+    } = useFinder();
+
+    const tabs: TabItem<FinderTab>[] = [
+        {
+            value: "auction",
+            label: "⚖ 법원경매",
+        },
+        {
+            value: "public",
+            label: "🏛 온비드 공매",
+        },
+        {
+            value: "location",
+            label: "📍 입지 분석",
+        },
+    ];
+
+    async function handleAnalyze(address: string) {
+
+        const result = await analyze(address);
+
+        navigate("/analysis", {
+
+            state: {
+
+                address,
+
+                result,
+
+            },
+
+        });
+
+    }
+
     return (
 
         <div className="finder-page">
 
-            <h1>🔍 Finder</h1>
+            <h1>
+
+                🔍 Finder
+
+            </h1>
 
             <p className="finder-subtitle">
 
-                오늘의 투자 기회를 찾아보세요.
+                경매, 공매, 입지 분석으로 투자 기회를 찾아보세요.
 
             </p>
 
-            <Card title="⚖ 오늘의 경매">
+            <Tabs<FinderTab>
+                items={tabs}
+                value={tab}
+                onChange={setTab}
+            />
 
-                <p>
+            {
 
-                    오늘 등록된 경매 물건을 확인합니다.
+                tab === "auction" && (
 
-                </p>
+                    <AuctionSection
 
-                <Button>
+                        items={auctions}
 
-                    경매 보기
+                    />
 
-                </Button>
+                )
 
-            </Card>
+            }
 
-            <Card title="🏛 오늘의 공매">
+            {
 
-                <p>
+                tab === "public" && (
 
-                    캠코 공매 물건을 확인합니다.
+                    <PublicSection
 
-                </p>
+                        items={publicSales}
 
-                <Button>
+                    />
 
-                    공매 보기
+                )
 
-                </Button>
+            }
 
-            </Card>
+            {
 
-            <Card title="📍 입지 시뮬레이션">
+                tab === "location" && (
 
-                <p>
+                    <LocationSection
 
-                    주소를 입력하면 AI가 입지를 분석합니다.
+                        result={locationResult}
 
-                </p>
+                        onAnalyze={handleAnalyze}
 
-                <input
+                    />
 
-                    className="finder-input"
+                )
 
-                    placeholder="예) 서울 영등포구 ○○로 123"
-
-                />
-
-                <div className="finder-action">
-
-                    <Button>
-
-                        분석하기
-
-                    </Button>
-
-                </div>
-
-            </Card>
-
-            <Card title="🤖 AI 분석 항목">
-
-                <div className="business-grid">
-
-                    <Business title="🏪 편의점" />
-
-                    <Business title="🚬 담배권" />
-
-                    <Business title="🏢 경쟁업종" />
-
-                    <Business title="🚗 주차" />
-
-                    <Business title="👨 유동인구" />
-
-                    <Business title="🏥 병원" />
-
-                    <Business title="🏫 학교" />
-
-                    <Business title="🚉 역세권" />
-
-                </div>
-
-            </Card>
-
-            <Card title="📈 오늘의 시장">
-
-                <ul className="insight-list">
-
-                    <li>📈 서울 업무시설 거래량 증가</li>
-
-                    <li>⚖ 경매 진행 건수 증가</li>
-
-                    <li>🏛 공매 물건 증가</li>
-
-                    <li>🏦 기준금리 동결 전망</li>
-
-                </ul>
-
-            </Card>
-
-        </div>
-
-    );
-
-}
-
-function Business({ title }: { title: string }) {
-
-    return (
-
-        <div className="business-card">
-
-            {title}
+            }
 
         </div>
 

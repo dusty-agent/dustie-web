@@ -1,0 +1,59 @@
+.location-search{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.location-search label{
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.location-search input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    outline:none;
+
+    transition:.2s;
+
+    font-size:15px;
+
+}
+
+.location-search input:focus{
+
+    border-color:#19a391;
+
+    box-shadow:0 0 0 3px rgba(25,163,145,.08);
+
+}
+
+.location-help{
+
+    font-size:13px;
+
+    color:#888;
+
+}
+
+.location-action{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}

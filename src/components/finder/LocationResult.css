@@ -1,0 +1,59 @@
+.location-result{
+
+    margin-top:24px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    background:white;
+
+}
+
+.location-result h3{
+
+    margin-bottom:20px;
+
+}
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.result-item{
+
+    background:#f8fafb;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.result-item span{
+
+    color:#666;
+
+}
+
+.result-item strong{
+
+    color:#19a391;
+
+    font-size:20px;
+
+}

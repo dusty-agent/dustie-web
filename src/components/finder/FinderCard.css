@@ -1,0 +1,133 @@
+.finder-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:14px;
+
+}
+
+.finder-score-wrap{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.finder-badge{
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.finder-badge.auction{
+
+    background:#FFF7E6;
+
+    color:#D97706;
+
+}
+
+.finder-badge.public{
+
+    background:#EEF6FF;
+
+    color:#2563EB;
+
+}
+
+.finder-badge.default{
+
+    background:#F3F4F6;
+
+    color:#666;
+
+}
+
+.finder-score{
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.finder-score.excellent{
+
+    color:#16A34A;
+
+}
+
+.finder-score.good{
+
+    color:#2563EB;
+
+}
+
+.finder-score.normal{
+
+    color:#D97706;
+
+}
+
+.finder-score.low{
+
+    color:#DC2626;
+
+}
+
+.finder-grade{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#19A391;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.finder-address{
+
+    color:#666;
+
+    margin:12px 0;
+
+}
+
+.finder-items{
+
+    margin:18px 0;
+
+    padding-left:18px;
+
+}
+
+.finder-items li{
+
+    margin-bottom:8px;
+
+}
