@@ -50,11 +50,11 @@ export default function Workspace() {
 
                 </Card>
 
-                <Card title="🏢 저장된 물건">
+                <Card title="🏢 저장된 기회">
 
                     <p>
 
-                        관심 물건과 추천 물건을 관리합니다.
+                        북마크한 기회를 관리합니다.
 
                     </p>
 
