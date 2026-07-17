@@ -182,7 +182,7 @@ export default function Dashboard() {
             </Card>
 
             <Card
-                title="🏢 오늘의 추천 물건"
+                title="🏢 오늘의 투자 기회"
                 onClick={() => navigate("/finder")}
             >
                 <p>오늘의 투자 기회</p>
