@@ -1,0 +1,44 @@
+
+.daily-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.daily-subtitle{
+
+    margin-top:-10px;
+
+    color:#777;
+
+}
+
+.daily-page h2{
+
+    margin-bottom:16px;
+
+}
+
+.daily-page p{
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+.daily-buttons{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-top:24px;
+
+    flex-wrap:wrap;
+
+}

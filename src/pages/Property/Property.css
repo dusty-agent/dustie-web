@@ -1,0 +1,87 @@
+.property-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.property-subtitle{
+
+    color:#777;
+
+    margin-top:-12px;
+
+}
+
+.property-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.property-card{
+
+    border:1px solid #ececec;
+
+    border-radius:16px;
+
+    padding:20px;
+
+}
+
+.property-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.roi{
+
+    color:#19a391;
+
+    font-weight:700;
+
+    margin:12px 0;
+
+}
+
+.business-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+.business-card{
+
+    background:#f5f8fa;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+.insight-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}

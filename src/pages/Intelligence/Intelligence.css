@@ -1,0 +1,109 @@
+.intelligence-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.intelligence-subtitle{
+
+    margin-top:-10px;
+
+    color:#777;
+
+}
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.status-dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#1ec98d;
+
+    animation:pulse 1.6s infinite;
+
+}
+
+.status span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#19a391;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.5);
+
+        opacity:.45;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.intelligence-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.intelligence-page .card button{
+
+    margin-top:20px;
+
+}

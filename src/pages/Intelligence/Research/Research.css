@@ -1,0 +1,56 @@
+
+.research-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.research-subtitle{
+
+    margin-top:-10px;
+
+    color:#777;
+
+}
+
+.research-page h2{
+
+    margin-bottom:16px;
+
+}
+
+.research-page p{
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+.research-buttons{
+
+    margin-top:24px;
+
+}
+
+.research-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:12px;
+
+}
+
+.research-list li{
+
+    color:#555;
+
+}

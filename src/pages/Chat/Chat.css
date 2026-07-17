@@ -1,0 +1,133 @@
+.chat-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.chat-subtitle{
+
+    color:#666;
+
+    margin-top:-12px;
+
+}
+
+.chat-context{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.live-dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#1ec98d;
+
+    animation:pulse 1.6s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.4);
+
+        opacity:.5;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.chat-input{
+
+    width:100%;
+
+    min-height:180px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    resize:vertical;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.chat-input:focus{
+
+    border-color:#19a391;
+
+}
+
+.chat-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:20px;
+
+}
+
+.chat-title{
+
+    margin-top:10px;
+
+}
+
+.suggest-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.suggest-grid .card{
+
+    cursor:pointer;
+
+}
+
+.suggest-grid .card:hover{
+
+    border-color:#19a391;
+
+}

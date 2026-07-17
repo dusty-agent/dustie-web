@@ -6,30 +6,29 @@ interface ButtonProps {
 
     href?: string;
 
+    onClick?: () => void;
+
 }
 
 export default function Button({
 
     children,
 
-    href
+    href,
 
-}:ButtonProps){
+    onClick,
 
-    if(href){
+}: ButtonProps) {
 
-        return(
+    if (href) {
+
+        return (
 
             <a
-
                 className="primary-button"
-
                 href={href}
-
                 target="_blank"
-
                 rel="noopener noreferrer"
-
             >
 
                 {children}
@@ -40,9 +39,12 @@ export default function Button({
 
     }
 
-    return(
+    return (
 
-        <button className="primary-button">
+        <button
+            className="primary-button"
+            onClick={onClick}
+        >
 
             {children}
 

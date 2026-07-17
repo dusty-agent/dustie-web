@@ -18,8 +18,8 @@ export default function Sidebar() {
                     🤖 Ask Dustie
                 </NavLink>
 
-                <NavLink to="/daily">
-                    📰 AP Daily
+                <NavLink to="/intelligence">
+                    📰 Intelligence
                 </NavLink>
 
                 <NavLink to="/property">
@@ -28,10 +28,6 @@ export default function Sidebar() {
 
                 <NavLink to="/analysis">
                     📈 Property Analysis
-                </NavLink>
-
-                <NavLink to="/research">
-                    📚 AP Research
                 </NavLink>
 
                 <NavLink to="/settings">

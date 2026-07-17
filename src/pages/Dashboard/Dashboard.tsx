@@ -71,7 +71,7 @@ export default function Dashboard() {
 
                 <Card
                     title="📰 AP Daily"
-                    onClick={() => navigate("/daily")}
+                    onClick={() => navigate("/intelligence/daily")}
                 >
 
                     <p>Today's Morning Brief</p>
@@ -135,7 +135,7 @@ export default function Dashboard() {
 
                 <Card
                     title="📰 AP Daily"
-                    onClick={() => navigate("/daily")}
+                    onClick={() => navigate("/intelligence/daily")}
                 >
                     <p>Today's Brief</p>
                 </Card>
