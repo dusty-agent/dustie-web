@@ -3,6 +3,8 @@ import {
     useState,
 } from "react";
 
+import { fetchLatestAuction } from "../api/auction";
+
 import type {
     AuctionJsonResponse,
     AuctionPropertyJson,
@@ -266,28 +268,17 @@ export function useFinder() {
 
     useEffect(() => {
         let cancelled = false;
-
+    
         async function loadAuctions() {
             try {
-                const response =
-                    await fetch(
-                        "/data/auction_latest.json",
-                    );
-
-                if (!response.ok) {
-                    throw new Error(
-                        `경매 데이터 요청 실패: ${response.status}`,
-                    );
-                }
-
                 const data =
-                    (await response.json()) as AuctionJsonResponse;
-
+                    await fetchLatestAuction();
+    
                 const mapped =
                     data.items.map(
                         mapAuctionItem,
                     );
-
+    
                 if (!cancelled) {
                     setAuctions(mapped);
                 }
@@ -296,15 +287,15 @@ export function useFinder() {
                     "법원경매 데이터를 불러오지 못했습니다.",
                     error,
                 );
-
+    
                 if (!cancelled) {
                     setAuctions([]);
                 }
             }
         }
-
+    
         loadAuctions();
-
+    
         return () => {
             cancelled = true;
         };
