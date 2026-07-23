@@ -84,6 +84,12 @@ export default function FinderCard({
                 <span>{item.title}</span>
             </h3>
 
+            {item.court && (
+                <p className="finder-court">
+                    🏛 {item.court}
+                </p>
+            )}
+
             <p className="finder-address">
 
                 📍 {item.address}

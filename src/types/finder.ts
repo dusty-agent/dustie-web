@@ -28,6 +28,16 @@ export interface FinderItem {
     caseNumber?: string;
 
     sourceUrl?: string;
+
+    appraisalPriceValue?: number;
+
+    minimumBidValue?: number;
+
+    minimumRateValue?: number;
+
+    failedCountValue?: number;
+
+    auctionDateValue?: string;
 }
 
 export interface BusinessRecommendation {

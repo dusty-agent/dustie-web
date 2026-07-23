@@ -162,3 +162,10 @@
 .finder-title-divider {
     opacity: 0.5;
 }
+
+.finder-court {
+    margin: 6px 0;
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 600;
+}

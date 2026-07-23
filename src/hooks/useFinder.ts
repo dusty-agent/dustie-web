@@ -206,6 +206,21 @@ function mapAuctionItem(
             auction.minimum_price,
         ),
 
+        appraisalPriceValue:
+            auction.appraisal_price,
+
+        minimumBidValue:
+            auction.minimum_price,
+
+        minimumRateValue:
+            auction.minimum_rate,
+
+        failedCountValue:
+            auction.failed_count,
+
+        auctionDateValue:
+            auction.auction_date,
+
         score,
 
         grade: calculateGrade(score),
