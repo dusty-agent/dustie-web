@@ -6,7 +6,6 @@ import {
 import { fetchLatestAuction } from "../api/auction";
 
 import type {
-    AuctionJsonResponse,
     AuctionPropertyJson,
     FinderItem,
     LocationAnalysis,
