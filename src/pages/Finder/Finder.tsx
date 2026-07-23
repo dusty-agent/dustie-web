@@ -8,28 +8,23 @@ import AuctionSection from "../../components/finder/sections/AuctionSection";
 import PublicSection from "../../components/finder/sections/PublicSection";
 import LocationSection from "../../components/finder/sections/LocationSection";
 
-import { useFinder, type FinderTab } from "../../hooks/useFinder";
+import {
+    useFinder,
+    type FinderTab,
+} from "../../hooks/useFinder";
 
 import "./Finder.css";
 
 export default function Finder() {
-
     const navigate = useNavigate();
 
     const {
-
         tab,
-
         setTab,
-
         auctions,
-
         publicSales,
-
         locationResult,
-
         analyze,
-
     } = useFinder();
 
     const tabs: TabItem<FinderTab>[] = [
@@ -47,38 +42,26 @@ export default function Finder() {
         },
     ];
 
-    async function handleAnalyze(address: string) {
-
+    async function handleAnalyze(
+        address: string,
+    ) {
         const result = await analyze(address);
 
         navigate("/analysis", {
-
             state: {
-
                 address,
-
                 result,
-
             },
-
         });
-
     }
 
     return (
-
         <div className="finder-page">
-
-            <h1>
-
-                🔍 Finder
-
-            </h1>
+            <h1>🔍 Finder</h1>
 
             <p className="finder-subtitle">
-
-                경매, 공매, 입지 분석으로 투자 기회를 찾아보세요.
-
+                경매, 공매, 입지 분석으로 투자 기회를
+                찾아보세요.
             </p>
 
             <Tabs<FinderTab>
@@ -87,52 +70,24 @@ export default function Finder() {
                 onChange={setTab}
             />
 
-            {
+            {tab === "auction" && (
+                <AuctionSection
+                    items={auctions}
+                />
+            )}
 
-                tab === "auction" && (
+            {tab === "public" && (
+                <PublicSection
+                    items={publicSales}
+                />
+            )}
 
-                    <AuctionSection
-
-                        items={auctions}
-
-                    />
-
-                )
-
-            }
-
-            {
-
-                tab === "public" && (
-
-                    <PublicSection
-
-                        items={publicSales}
-
-                    />
-
-                )
-
-            }
-
-            {
-
-                tab === "location" && (
-
-                    <LocationSection
-
-                        result={locationResult}
-
-                        onAnalyze={handleAnalyze}
-
-                    />
-
-                )
-
-            }
-
+            {tab === "location" && (
+                <LocationSection
+                    result={locationResult}
+                    onAnalyze={handleAnalyze}
+                />
+            )}
         </div>
-
     );
-
 }

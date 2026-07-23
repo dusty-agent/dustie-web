@@ -56,10 +56,32 @@ export default function FinderCard({
 
             </div>
 
-            <h3>
+            <h3 className="finder-title">
+                {item.caseNumber && item.sourceUrl ? (
+                    <a
+                        href={item.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="finder-case-link"
+                        title="대한민국 법원경매정보에서 확인"
+                        onClick={(event) => {
+                            event.stopPropagation();
+                        }}
+                    >
+                        {item.caseNumber}
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+                ) : null}
 
-                {item.title}
+                {item.caseNumber ? (
+                    <span className="finder-title-divider">
+                        ·
+                    </span>
+                ) : null}
 
+                <span>{item.title}</span>
             </h3>
 
             <p className="finder-address">

@@ -1,0 +1,10 @@
+[
+    {
+        "term": "Dustie",
+        "aliases": ["Dustie AI"],
+        "category": "Company",
+        "description": "DustyDraft AI Assistant",
+        "related": ["DustyDraft", "AssetPicker"],
+        "tags": ["AI", "Assistant"]
+    }
+]

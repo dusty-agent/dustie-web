@@ -1,0 +1,34 @@
+[
+    {
+        "term": "재초환",
+        "aliases": [
+            "재건축초과이익환수제"
+        ],
+        "category": "Policy",
+        "description": "재건축으로 발생한 초과이익의 일부를 환수하는 제도",
+        "related": [
+            "재건축",
+            "용적률",
+            "안전진단"
+        ],
+        "tags": [
+            "정책",
+            "재건축"
+        ]
+    },
+    {
+        "term": "용적률",
+        "aliases": [
+            "FAR"
+        ],
+        "category": "Building",
+        "description": "대지면적 대비 건축물 연면적의 비율",
+        "related": [
+            "건폐율",
+            "연면적"
+        ],
+        "tags": [
+            "건축"
+        ]
+    }
+]

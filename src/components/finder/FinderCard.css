@@ -131,3 +131,34 @@
     margin-bottom:8px;
 
 }
+
+.finder-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.finder-case-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.finder-case-link:hover {
+    text-decoration: underline;
+}
+
+.finder-case-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.finder-title-divider {
+    opacity: 0.5;
+}
